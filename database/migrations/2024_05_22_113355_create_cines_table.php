@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Cine;
+use App\Models\Ciudad;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -12,10 +12,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('salas', function (Blueprint $table) {
+        Schema::create('cines', function (Blueprint $table) {
             $table->id();
             $table->string('descripcion');
-            $table->foreignIdFor(Cine::class)->constrained();
+            $table->integer('codigo_api');
+            $table->foreignIdFor(Ciudad::class)->constrained();
             $table->timestamps();
         });
     }
@@ -25,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('salas');
+        Schema::dropIfExists('cines');
     }
 };
