@@ -3,17 +3,17 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Models\Ciudad;
+use App\Models\TipoEntrada;
 use Illuminate\Http\Request;
 
-class CiudadController extends Controller
+class TipoEntradaController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return Ciudad::All();
+        return TipoEntrada::All();
     }
 
     /**

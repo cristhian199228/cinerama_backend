@@ -3,17 +3,17 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Models\Ciudad;
+use App\Models\Cine;
 use Illuminate\Http\Request;
 
-class CiudadController extends Controller
+class CineController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return Ciudad::All();
+        return Cine::All();
     }
 
     /**

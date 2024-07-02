@@ -16,8 +16,12 @@ return new class extends Migration
             $table->string('titulo');
             $table->text('sinopsis');
             $table->string('director');
-            $table->string('reparto');
+            $table->integer('duracion');
             $table->date('fecha_estreno');
+            $table->integer('codigo_api');
+            $table->text('poster_path_api');
+            $table->text('wallpaper_path_api');
+            $table->text('trailer_path_api');
             $table->timestamps();
         });
     }

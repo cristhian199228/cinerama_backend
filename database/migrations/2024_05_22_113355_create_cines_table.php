@@ -15,7 +15,6 @@ return new class extends Migration
         Schema::create('cines', function (Blueprint $table) {
             $table->id();
             $table->string('descripcion');
-            $table->integer('codigo_api');
             $table->foreignIdFor(Ciudad::class)->constrained();
             $table->timestamps();
         });
