@@ -20,3 +20,4 @@ Route::apiresource('tipoentrada', TipoEntradaController::class);
 Route::apiresource('pelicula', PeliculaController::class);
 
 Route::post('buscarPelicula',[PeliculaController::class,'buscarPelicula']);
+Route::post('buscarPeliculaPorId',[PeliculaController::class,'buscarPeliculaPorId']);
