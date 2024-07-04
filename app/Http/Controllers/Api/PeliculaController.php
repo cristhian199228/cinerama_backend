@@ -22,7 +22,27 @@ class PeliculaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Validar la solicitud
+        $validatedData = $request->validate([
+            'titulo' => 'required|string|max:255',
+            'sinopsis' => 'required|string',
+            'director' => 'required|string|max:255',
+            'duracion' => 'required|integer',
+            'fecha_estreno' => 'required|date',
+            'codigo_api' => 'nullable|integer',
+            'poster_path_api' => 'nullable|string',
+            'wallpaper_path_api' => 'nullable|string',
+            'trailer_path_api' => 'nullable|string',
+        ]);
+
+        // Crear y guardar la película
+        $pelicula = Pelicula::create($validatedData);
+
+        // Devolver una respuesta exitosa
+        return response()->json([
+            'message' => 'Película agregada exitosamente!',
+            'pelicula' => $pelicula
+        ], 201);
     }
 
     /**
