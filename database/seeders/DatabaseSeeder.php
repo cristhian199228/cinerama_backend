@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
             CineSeeder::class,
             SalaSeeder::class,
             TipoEntradaSeeder::class,
-            PeliculaSeeder::class           
+            //PeliculaSeeder::class           
         ]);
     }
 }
