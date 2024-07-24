@@ -14,7 +14,7 @@ class FuncionController extends Controller
      */
     public function index()
     {
-        return Funcion::with('pelicula','sala.cine')->get();
+        return Funcion::with('pelicula','sala.cine','sala.asiento')->get();
     }
 
     /**

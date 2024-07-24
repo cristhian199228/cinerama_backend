@@ -21,7 +21,9 @@ class DatabaseSeeder extends Seeder
             CiudadSeeder::class,
             CineSeeder::class,
             SalaSeeder::class,
+            AsientoSeeder::class,
             TipoEntradaSeeder::class,
+
             //PeliculaSeeder::class           
         ]);
     }

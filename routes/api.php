@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\AsientoController;
 use App\Http\Controllers\Api\CineController;
 use App\Http\Controllers\Api\CiudadController;
 use App\Http\Controllers\Api\FuncionController;
@@ -7,6 +8,7 @@ use App\Http\Controllers\Api\PeliculaController;
 use App\Http\Controllers\Api\SalaController;
 use App\Http\Controllers\Api\TipoEntradaController;
 use App\Http\Middleware\AuthenticateOrGuest;
+use App\Models\Asiento;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,6 +22,7 @@ Route::apiresource('sala', SalaController::class);
 Route::apiresource('tipoentrada', TipoEntradaController::class);
 Route::apiresource('pelicula', PeliculaController::class);
 Route::apiresource('funcion', FuncionController::class);
+Route::apiresource('asiento', AsientoController::class);
 
 Route::post('buscarPelicula',[PeliculaController::class,'buscarPelicula']);
 Route::post('buscarPeliculaPorId',[PeliculaController::class,'buscarPeliculaPorId']);
