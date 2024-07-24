@@ -47,4 +47,8 @@ class SalaController extends Controller
     {
         //
     }
+
+    public function salaById(string $id){
+        return Sala::where('cine_id',$id)->get();
+    }
 }

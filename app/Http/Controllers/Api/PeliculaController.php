@@ -50,8 +50,9 @@ class PeliculaController extends Controller
      */
     public function show(Pelicula $pelicula)
     {
-        return $pelicula;
+        return $pelicula->load('funcion.sala.cine');
     }
+
 
     /**
      * Update the specified resource in storage.
