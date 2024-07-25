@@ -26,12 +26,8 @@ class MenuSeeder extends Seeder
             'to' => '/cines'
         ]);
         Menu::create([
-            'descripcion'=> 'DULCERIA',
-            'to' => '/dulceria'
-        ]);
-        Menu::create([
             'descripcion'=> 'ADMINISTRADOR',
-            'to' => '/administrador'
+            'to' => '/administrador/ciudades'
         ]);
     }
 }

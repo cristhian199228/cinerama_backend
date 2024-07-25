@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
             SalaSeeder::class,
             AsientoSeeder::class,
             TipoEntradaSeeder::class,
-
+            ProductoSeeder::class
             //PeliculaSeeder::class           
         ]);
     }

@@ -40,10 +40,6 @@ class RolSeeder extends Seeder
             'rol_id' => 1
         ]);
         DB::table('menu_rol')->insert([
-            'menu_id' => 5,
-            'rol_id' => 1
-        ]);
-        DB::table('menu_rol')->insert([
             'menu_id' => 1,
             'rol_id' => 3
         ]);
@@ -53,10 +49,6 @@ class RolSeeder extends Seeder
         ]);
         DB::table('menu_rol')->insert([
             'menu_id' => 3,
-            'rol_id' => 3
-        ]);
-        DB::table('menu_rol')->insert([
-            'menu_id' => 4,
             'rol_id' => 3
         ]);
     }
